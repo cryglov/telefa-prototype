@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+<div class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 border-b border-gray-100 dark:border-gray-800 justify-between">
+<div class="text-gray-900 dark:text-white flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Report Details</h2>
+</div>
+<div class="flex-1 overflow-y-auto pb-32">
+<div class="mt-4">
+<h3 class="text-gray-500 dark:text-gray-400 text-sm font-semibold uppercase tracking-wider px-6 pb-2 pt-4">Reason for report</h3>
+<div class="mx-4 bg-white dark:bg-[#1c2630] rounded-xl overflow-hidden shadow-sm">
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-gray-50 dark:border-gray-800 last:border-0">
+<div class="flex items-center gap-4">
+<div class="text-white flex items-center justify-center rounded-full bg-primary shrink-0 size-10">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex flex-col">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight">Harassment or Hate Speech</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs">Selected category</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="text-gray-400 flex size-7 items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-gray-500 dark:text-gray-400 text-sm font-semibold uppercase tracking-wider px-6 pb-2 pt-4">Reported message</h3>
+<div class="mx-4 bg-white dark:bg-[#1c2630] rounded-xl p-2 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-end gap-3 p-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="User profile picture with dark hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7okZguo_s0DNPEup4seTcZdbgobyc9PRiFK8yZibtpWfn0tnHFjN0CHSfm244eWrnwEncb4h62uFZPOnSaN1jYMAYm4CiKxtnJnwZ_MExmhCfLbbUIXBe6iWnaH8WNmQQox_HJUNCIWjHlki26HV6z30G6R0vkQlJi8IqyRWieWIwhH6sUnalW74qm_9GGBBkLk7mPRLKw2Dajsx3Y3yMc8gj-_cV75LERyyJwUwvo0AGhKJ3UL5PYV1IgVHXfAVpkZRRpR3NItrS");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-gray-500 dark:text-[#92adc9] text-[13px] font-normal leading-normal max-w-[360px]">Alex Johnson</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-2xl rounded-bl-sm px-4 py-3 bg-gray-100 dark:bg-[#233648] text-gray-900 dark:text-white">
+              I think we should report that bug we found in the last version though. It's causing crashes
+            </p>
+<p class="text-[10px] text-gray-400 mt-1 uppercase tracking-tighter">Sent 2:45 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-gray-500 dark:text-gray-400 text-sm font-semibold uppercase tracking-wider px-6 pb-2 pt-4">Tell us more (Optional)</h3>
+<div class="px-4">
+<textarea class="w-full bg-white dark:bg-[#1c2630] text-gray-900 dark:text-white border-none rounded-xl p-4 min-h-[140px] focus:ring-2 focus:ring-primary shadow-sm placeholder-gray-400" placeholder="What's wrong with this message? Your feedback helps us keep the community safe."></textarea>
+<div class="flex justify-end mt-2 px-1">
+<span class="text-xs text-gray-400 font-medium">0 / 500</span>
+</div>
+</div>
+</div>
+<div class="px-6 mt-4 mb-8">
+<div class="flex gap-2 items-start opacity-70">
+<span class="material-symbols-outlined text-xl text-primary mt-0.5">verified_user</span>
+<p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">
+                    The reported message will be attached to this report for review. The user you are reporting will not be notified. Our team will review the message according to our Safety Guidelines.
+                </p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<button onclick="location.href='move4.html'" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+      Submit Report
+    </button>
+</div>
+
+</body></html>

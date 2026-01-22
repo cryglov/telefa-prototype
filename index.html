@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat with Message Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .glass-blur {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] overflow-hidden">
+<div class="relative flex h-screen w-full flex-col max-w-[480px] mx-auto bg-white dark:bg-slate-900 shadow-2xl overflow-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-4 pb-2 justify-between z-10 border-b border-gray-100 dark:border-slate-800">
+<div class="text-[#0d141b] dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Alex Johnson</h2>
+<p class="text-[12px] text-[#4c739a] dark:text-slate-400 font-medium">Online</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" data-alt="User profile picture of Alex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7okZguo_s0DNPEup4seTcZdbgobyc9PRiFK8yZibtpWfn0tnHFjN0CHSfm244eWrnwEncb4h62uFZPOnSaN1jYMAYm4CiKxtnJnwZ_MExmhCfLbbUIXBe6iWnaH8WNmQQox_HJUNCIWjHlki26HV6z30G6R0vkQlJi8IqyRWieWIwhH6sUnalW74qm_9GGBBkLk7mPRLKw2Dajsx3Y3yMc8gj-_cV75LERyyJwUwvo0AGhKJ3UL5PYV1IgVHXfAVpkZRRpR3NItrS");'></div>
+</div>
+</div>
+<!-- Chat Conversation Area -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<!-- Received Message -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="Small profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPh86kBal9GDH8VFZFMbRdyb_cMcxHnHKM4ur86dQOZvUiUwwCUDxUsFtz3-dNTmw5sKeDi15MC1GI4MX2B48jJqaXSBDuDYe6kk9JjI79FCC-qZ9mdw1ZG9q_khjewtE4q8GMAkiY8BWV5uhxPNw0QcBpOwuMzAjEFBwmWbV0zx8Yw9dy7TE7HqkiVzjc1vdMNzO5IXUWwWhqQXWmoACmu1EgnmxodAD3hiHMwG8CVCeFFW0lFQqB32aRIwEab61WlILTgVi1GPVv");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-[#4c739a] text-[11px] font-medium leading-normal ml-2">Alex Johnson</p>
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-2xl rounded-bl-none px-4 py-2.5 bg-[#e7edf3] text-[#0d141b]">
+                        Hey, did you see the latest update?
+                    </p>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-[#4c739a] text-[11px] font-medium leading-normal mr-2 text-right">Me</p>
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-2xl rounded-br-none px-4 py-2.5 bg-primary text-white">
+                        Yeah, looking good!
+                    </p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="My profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD31vu00i-poevQX3KgU8Yo3yvqoYqQtRD_UC_DQvFLcoj6ZRIP10gWdqIHe65wxzS1TYYxxOussoRKd8AFnDFVb7U-LJVe6iJBuYzANpSyua-QULV3hZe7JcklOtHQEyMvAyl56yKRJWmaMK1cwxcaMQsefDSQwrqGRYv1fL_d0zErR8ZD4Rjz6Opzy0NbP2SkejxJqOu36-00EVJf_BkAndglyrMWtANToal0gYXFojnhaKUWkJ1B-yUsqucbypa2b9Wx3XGQ2wX7");'></div>
+</div>
+<!-- Message to be reported -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="Small profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADL1Rh-FDBtjdxguO-PCl0XHdScpr3oIjNZuQoJnSUayotfIhoHFRIsClAd2IQrGyKRJLRwcYWEjtDjhC1M4runUd3LlW35Hl61FPSxwDCsq1HGk3xFt4RAA8J_UH7-WprlolJOFlP7PM0YZIxt2QftvQBJgzvyeh-U_DZjqAi5rBDgLjMnraGXNf1tsHYUffc3ccmJBnyeukzvvDh-NlKYoiqaDfs2qlnnjhB5BeBh3mvOuJku6aJkKUljpynf5om0nyRtuF9rqWi");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-[#4c739a] text-[11px] font-medium leading-normal ml-2">Alex Johnson</p>
+<p class="text-base font-normal leading-normal flex max-w-[80%] rounded-2xl rounded-bl-none px-4 py-2.5 bg-[#e7edf3] text-[#0d141b]">
+                        I think we should report that bug we found in the last version though. It's causing crashes.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Input Bar (Blurred Background State) -->
+<div class="p-4 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 flex items-center gap-3">
+<button class="text-primary p-1"><span class="material-symbols-outlined">add_circle</span></button>
+<div class="flex-1 bg-gray-100 dark:bg-slate-800 rounded-full px-4 py-2 text-gray-400 text-sm">
+                Message...
+            </div>
+<button class="text-primary p-1"><span class="material-symbols-outlined">mic</span></button>
+</div>
+<!-- Overlay Menu System -->
+<div class="absolute inset-0 z-50 flex flex-col items-center justify-center p-6 bg-black/20 glass-blur">
+<div class="w-full max-w-xs space-y-4">
+<!-- The Highlighted Message (Lifted) -->
+<div class="flex items-end gap-3 drop-shadow-xl">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="Small profile avatar highlighted" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMmztLCRnjGjgvcVAfOvRmS5BT-BEmoG9aD0sGH-1ascg4Io-8UpTEIme5L1ClegX3rs0FWG6pUB822tU_m56-FJ8phtV3gpHkSk6A-c6xLPVmiTzxVUixmUs1LAHb8eeZsZQQtL0t9cl4REtb1cSBWElsRaoe7l2juQqjWoYu6vltc_4SjsvLpDhMbh7Bvuwbgx2NdwRFDAV4QC7qdvBNV3teIQMwnzrUpdkNAXVh3ZOCEVzZnaqPs-HrT-aNIC_UJlgHnW8vhhpu");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start scale-105 origin-left transition-transform">
+<p class="text-white text-[11px] font-semibold leading-normal ml-2">Alex Johnson</p>
+<p class="text-base font-normal leading-normal flex rounded-2xl rounded-bl-none px-4 py-2.5 bg-white text-[#0d141b] shadow-lg">
+                            I think we should report that bug we found in the last version though. It's causing crashes.
+                        </p>
+</div>
+</div>
+<!-- Context Menu -->
+<div class="bg-white/90 backdrop-blur-xl rounded-[20px] overflow-hidden shadow-2xl flex flex-col divide-y divide-gray-200 w-[240px]">
+<button class="flex items-center justify-between px-4 py-3 text-[#0d141b] hover:bg-gray-50 active:bg-gray-100 transition-colors">
+<span class="text-sm font-medium">Reply</span>
+<span class="material-symbols-outlined text-[20px] opacity-70">reply</span>
+</button>
+<button class="flex items-center justify-between px-4 py-3 text-[#0d141b] hover:bg-gray-50 active:bg-gray-100 transition-colors">
+<span class="text-sm font-medium">Copy</span>
+<span class="material-symbols-outlined text-[20px] opacity-70">content_copy</span>
+</button>
+<button class="flex items-center justify-between px-4 py-3 text-[#0d141b] hover:bg-gray-50 active:bg-gray-100 transition-colors">
+<span class="text-sm font-medium">Forward</span>
+<span class="material-symbols-outlined text-[20px] opacity-70">forward</span>
+</button>
+<button onclick="location.href='move2.html'"  class="flex items-center justify-between px-4 py-3 text-red-600 hover:bg-red-50 active:bg-red-100 transition-colors">
+<span class="text-sm font-semibold">Report</span>
+<span class="material-symbols-outlined text-[20px]">report</span>
+</button>
+</div>
+<!-- Cancel area (tap anywhere to close) -->
+<div class="absolute inset-0 -z-10 cursor-pointer"></div>
+</div>
+</div>
+</div>
+</body></html>
